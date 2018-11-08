@@ -1,7 +1,7 @@
 ﻿module Xmas1000
 
-let blankRow = Array.init<char> 11 (fun _ -> '*');
-let blankGrid = Array.init<char[]> 7 (fun _ -> blankRow);
+let blankRow = Array.init<char> 11 (fun _ -> '*') |> Array.toSeq;
+let blankGrid = Array.init<seq<char>> 7 (fun _ -> blankRow) |> Array.toSeq
 
 let mapij fn grid = 
     grid 
